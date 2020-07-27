@@ -1,0 +1,37 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int t; 
+    scanf("%d",&t);
+    for(int a0 = 0; a0 < t; a0++){
+        long n; 
+ scanf("%d",&n);
+        
+        for(int i=n;i>=2;i--)
+        {
+           int p=0,q=1;
+            if(n%i==0)
+            {q=i;
+                for(int j=2;j<=i/2;j++)
+                {
+                    if(i%j==0){
+                     p=1;}
+                
+                }
+               // printf("%d\t",i);
+            
+            if(p==0){
+            printf("%d\t",q);
+            break;}
+            }
+
+        }printf("\n");
+    }
+    return 0;
+}
